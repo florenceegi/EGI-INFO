@@ -615,18 +615,18 @@
     "projects": [
       {
         "icon": "🌳",
-        "title": "Reforestation",
-        "description": "Support for tree-planting projects in degraded areas, verified by APS. Not just reforesting, but maintaining vital ecosystems to rehabilitate ecological balance."
+        "title": "Appropriate Restoration Forestry",
+        "description": "Deforestation is eroding our planet's green lung at an alarming rate. Every second, we lose vital forest areas the size of a football field. Solution: reforestation projects that are careful and respectful of ecosystems, not just reforesting but maintaining the most vital areas to rehabilitate ecological balance."
       },
       {
         "icon": "🌊",
         "title": "Aquatic Plastic Removal",
-        "description": "Contribution to concrete plastic removal initiatives from aquatic environments: seas, lakes and rivers. A crucial action for the health of our ecosystems."
+        "description": "If we merged all the plastic islands floating in our oceans today, their extent would rival that of a continent. Solution: concrete projects to remove plastic from aquatic environments — a crucial action clearing our seas, lakes and rivers."
       },
       {
         "icon": "🐝",
         "title": "Bee Population Enhancement",
-        "description": "Programs supporting bee populations, fundamental for biodiversity and global food security. Bees are responsible for over 70% of pollination."
+        "description": "Bees, the silent architects of our planet's biodiversity, are in alarming decline. A third of our food depends on their existence! Solution: enhancement of bee populations in our ecosystem of interest to increase their numbers, thus supporting their biodiversity and pollination."
       }
     ]
   }

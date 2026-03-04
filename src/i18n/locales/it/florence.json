@@ -1352,18 +1352,18 @@
     "projects": [
       {
         "icon": "🌳",
-        "title": "Riforestazione",
-        "description": "Sostegno a progetti di piantumazione in aree degradate, verificati dall'APS. Non solo si riforestano le aree ma si mantengono vitali per riabilitare l'equilibrio degli ecosistemi."
+        "title": "Appropriate Restoration Forestry",
+        "description": "La deforestazione sta erodendo il polmone verde del nostro pianeta ad un ritmo allarmante. Ogni secondo che passa, perdiamo aree di foresta vitale, equivalenti alla dimensione di un campo di calcio. Soluzione: progetti di riforestazione attenta e rispettosa degli ecosistemi che non solo riforestano ma mantengono quelle più vitali per riabilitare l'equilibrio degli ecosistemi."
       },
       {
         "icon": "🌊",
-        "title": "Riduzione Plastica Acquatica",
-        "description": "Contributo a iniziative concrete di rimozione della plastica dagli ambienti acquatici: mari, laghi e fiumi. Un'azione cruciale per la salute degli ecosistemi."
+        "title": "Aquatic Plastic Removal",
+        "description": "Se unissimo tutte le isole di plastica che oggi galleggiano nei nostri oceani, la loro estensione sfiderebbe quella di un continente. Soluzione: progetti concreti di rimozione della plastica dai vari ambienti acquatici, un'azione cruciale che si staglia dalle isole dei nostri mari, laghi e fiumi."
       },
       {
         "icon": "🐝",
-        "title": "Protezione delle Api",
-        "description": "Programmi di supporto alla popolazione delle api, fondamentali per la biodiversità e la sicurezza alimentare globale. Le api sono responsabili di oltre il 70% dell'impollinazione."
+        "title": "Bee Population Enhancement",
+        "description": "Le api, architetti silenziosi della biodiversità del nostro pianeta, sono in un allarmante declino. Un terzo del nostro cibo dipende dalla loro esistenza! Soluzione: potenziamento delle popolazioni di api nel nostro ecosistema di interesse al fine di incrementare la loro popolazione, supportando così la loro biodiversità e la pollinizzazione."
       }
     ],
     "greenwashing": [
