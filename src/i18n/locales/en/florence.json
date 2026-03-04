@@ -287,16 +287,47 @@
     "disclaimer": "Indicative roadmap — priorities subject to change"
   },
   "whatWeDo": {
-    "techTitle": "Enterprise complexity made invisible",
-    "chainLabel": "Blockchain",
-    "aiLabel": "Artificial Intelligence",
-    "systemDesc": "in a system so simple anyone can use it.",
-    "behindTitle": "Behind it there's",
-    "algorandLabel": "Algorand",
-    "natanLabel": "NATAN AI",
-    "carbonNegative": "Carbon-negative blockchain",
-    "madeInItaly": "Made in Italy",
-    "florentineDesign": "Florentine design"
+    "badge": "Who we are",
+    "title": "FlorenceEGI restores truth, recognition and real value to the digital world",
+    "intro": "We are not a marketplace. We are an infrastructure: we certify, protect and make your real assets liquid — art, documents, products, ideas — on Algorand blockchain.",
+    "body1": "Every EGI (Eco Goods Invent) is a digital certificate that fuses three inseparable things: your asset, automatic perpetual royalties, and direct funding of verified environmental projects. We hold no funds. We manage no crypto. You pay in euros, value generates itself.",
+    "body2": "The place where a work becomes real because someone creates it, recognises it and completes it. The artist generates the form, but it is the encounter with the patron that activates its full existence. Every transaction permanently inscribes in the blockchain the names of who created and who chose to believe in that work.",
+    "pillars": [
+      {
+        "icon": "🎨",
+        "title": "Aesthetic Value",
+        "desc": "Any asset born from human ingenuity: physical and digital art, design, music, documents, intellectual property."
+      },
+      {
+        "icon": "⛓️",
+        "title": "Immutable Record",
+        "desc": "Certificate of Authenticity (CoA) on Algorand. SHA-256 cryptographic hash + permanent timestamp. Public QR verification — no login required."
+      },
+      {
+        "icon": "🌱",
+        "title": "Environmental Impact",
+        "desc": "20% of every transaction automatically funds one of three EPP programmes: Appropriate Restoration Forestry, Aquatic Plastic Removal, Bee Population Enhancement."
+      }
+    ],
+    "highlights": [
+      {
+        "value": "4.5%",
+        "label": "Perpetual royalties to Creator"
+      },
+      {
+        "value": "20%",
+        "label": "To verified environmental projects"
+      },
+      {
+        "value": "0€",
+        "label": "No upfront costs"
+      },
+      {
+        "value": "4.5s",
+        "label": "Algorand blockchain finality"
+      }
+    ],
+    "note": "GDPR by design · MiCA-safe · Zero upfront costs · Euro payments"
   },
   "payments": {
     "platformRoleTitle": "What the platform does (and does not do)",

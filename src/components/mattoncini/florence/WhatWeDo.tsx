@@ -1,203 +1,193 @@
 /**
- * Mattoncino: Cos'è FlorenceEGI (What We Do)
- * 
- * Spiega cosa fa FlorenceEGI: blockchain + AI invisibile
- * 
- * Chiave JSON: florence.hero.whatWeDo
+ * Mattoncino: Chi è FlorenceEGI — What We Do
+ *
+ * Fonti ufficiali:
+ *   - 01_Fondamenti_e_Visione.md
+ *   - EGI-HUB-HOME-REACT / mobile/data/homepage.ts (AboutSection)
+ *
+ * Chiave JSON: florence.whatWeDo
  * Rotta test: /info/florence/what-we-do
  */
 
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { GlossaryTerm } from '../../common/GlossaryTerm';
 
 const GOLD = '#d4af37';
 const GREEN = '#4ade80';
 const PURPLE = '#a855f7';
 
+interface Pillar {
+  icon: string;
+  title: string;
+  desc: string;
+}
+
+interface Highlight {
+  value: string;
+  label: string;
+}
+
 const WhatWeDo: React.FC = () => {
   const { t } = useTranslation('florence');
 
-  const cardStyle: React.CSSProperties = {
-    background: 'rgba(74, 222, 128, 0.08)',
-    border: '1px solid rgba(74, 222, 128, 0.25)',
-    borderRadius: '16px',
-    padding: '30px',
-    textAlign: 'center' as const
-  };
+  const pillars = t('whatWeDo.pillars', { returnObjects: true }) as Pillar[];
+  const highlights = t('whatWeDo.highlights', { returnObjects: true }) as Highlight[];
 
   return (
-    <section 
+    <section
       style={{
         minHeight: '100vh',
         padding: '80px 20px',
-        background: '#0a0a0a'
+        background: 'linear-gradient(135deg, #0a0a0a 0%, rgba(168,85,247,0.05) 50%, #0a0a0a 100%)'
       }}
     >
       <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
-        
-        {/* Header */}
+
+        {/* Badge */}
         <div style={{ textAlign: 'center', marginBottom: '60px' }}>
           <span style={{
             display: 'inline-block',
-            padding: '10px 20px',
-            background: 'rgba(168, 85, 247, 0.15)',
-            border: '1px solid rgba(168, 85, 247, 0.35)',
+            padding: '10px 24px',
+            background: 'rgba(168,85,247,0.12)',
+            border: '1px solid rgba(168,85,247,0.35)',
             borderRadius: '50px',
             color: PURPLE,
             fontSize: '14px',
             fontWeight: 600,
-            marginBottom: '24px'
+            letterSpacing: '0.05em',
+            marginBottom: '28px'
           }}>
-            🔮 Tecnologia Invisibile
+            {t('whatWeDo.badge')}
           </span>
-          
+
           <h1 style={{
-            fontSize: 'clamp(2rem, 5vw, 3.5rem)',
+            fontSize: 'clamp(1.8rem, 4.5vw, 3rem)',
             fontWeight: 800,
             color: '#ffffff',
-            marginBottom: '16px'
+            marginBottom: '28px',
+            lineHeight: 1.25,
+            maxWidth: '780px',
+            margin: '0 auto 28px'
           }}>
-            Cos'è <span style={{ color: GOLD }}>FlorenceEGI</span>?
+            {t('whatWeDo.title')}
           </h1>
-          
+
           <p style={{
-            fontSize: '1.25rem',
-            color: 'rgba(255, 255, 255, 0.6)'
+            fontSize: '1.2rem',
+            color: 'rgba(255,255,255,0.75)',
+            lineHeight: 1.7,
+            maxWidth: '720px',
+            margin: '0 auto 20px'
           }}>
-            La complessità della tecnologia resa invisibile
+            {t('whatWeDo.intro')}
+          </p>
+
+          <p style={{
+            fontSize: '1rem',
+            color: 'rgba(255,255,255,0.55)',
+            lineHeight: 1.75,
+            maxWidth: '700px',
+            margin: '0 auto 16px'
+          }}>
+            {t('whatWeDo.body1')}
+          </p>
+
+          <p style={{
+            fontSize: '1rem',
+            color: 'rgba(255,255,255,0.55)',
+            lineHeight: 1.75,
+            maxWidth: '700px',
+            margin: '0 auto'
+          }}>
+            {t('whatWeDo.body2')}
           </p>
         </div>
 
-        {/* Contenuto principale */}
-        <div style={{
-          background: 'rgba(30, 30, 40, 0.7)',
-          border: '1px solid rgba(255, 255, 255, 0.1)',
-          borderRadius: '24px',
-          padding: '50px',
-          marginBottom: '50px'
-        }}>
-          <p style={{
-            fontSize: '1.2rem',
-            color: 'rgba(255, 255, 255, 0.85)',
-            lineHeight: 1.9,
-            marginBottom: '28px'
-          }}>
-            Siamo i primi al mondo ad aver fuso{' '}
-            <GlossaryTerm termId="blockchain">{t('whatWeDo.chainLabel')}</GlossaryTerm> e{' '}
-            <GlossaryTerm termId="natan">{t('whatWeDo.aiLabel')}</GlossaryTerm> in un 
-            sistema così semplice che chiunque può usarlo.
-          </p>
-          
-          <p style={{
-            fontSize: '1.2rem',
-            color: 'rgba(255, 255, 255, 0.85)',
-            lineHeight: 1.9,
-            marginBottom: '28px'
-          }}>
-            Dietro c'è <GlossaryTerm termId="algorand">{t('whatWeDo.algorandLabel')}</GlossaryTerm> (la blockchain 
-            a zero emissioni CO₂ usata dalla SIAE per i diritti d'autore),{' '}
-            <GlossaryTerm termId="natan">{t('whatWeDo.natanLabel')}</GlossaryTerm> che ti suggerisce prezzi 
-            e descrizioni analizzando il mercato reale,{' '}
-            <GlossaryTerm termId="smart-contract">{t('common:terms.smartContract')}</GlossaryTerm> automatici 
-            per le <GlossaryTerm termId="royalty-piattaforma">{t('common:terms.royaltyPerpetue')}</GlossaryTerm>.
-          </p>
-          
-          <p style={{
-            fontSize: '1.2rem',
-            color: 'rgba(255, 255, 255, 0.85)',
-            lineHeight: 1.9
-          }}>
-            Ma tu non vedi nulla di tutto questo: carichi un'opera come su Instagram, 
-            clicchi <span style={{ color: GOLD, fontWeight: 700 }}>EGIZZA</span>, e in 5 secondi hai un{' '}
-            <GlossaryTerm termId="coa">{t('common:terms.certificatoBlockchain')}</GlossaryTerm> riconosciuto 
-            dalla legge italiana come prova di paternità.
-          </p>
-        </div>
-
-        {/* Zero Complessità - 3 cards */}
+        {/* I tre pilastri */}
         <div style={{
           display: 'grid',
           gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
           gap: '24px',
           marginBottom: '50px'
         }}>
-          <div style={cardStyle}>
-            <div style={{ fontSize: '3rem', marginBottom: '16px' }}>🚫</div>
-            <h3 style={{ fontSize: '1.25rem', fontWeight: 700, color: GREEN, marginBottom: '12px' }}>
-              Zero Wallet Crypto
-            </h3>
-            <p style={{ fontSize: '0.95rem', color: 'rgba(255, 255, 255, 0.7)', lineHeight: 1.6 }}>
-              Niente <GlossaryTerm termId="wallet">wallet</GlossaryTerm> da configurare, 
-              nessuna app esterna da installare
-            </p>
-          </div>
-          
-          <div style={cardStyle}>
-            <div style={{ fontSize: '3rem', marginBottom: '16px' }}>🔐</div>
-            <h3 style={{ fontSize: '1.25rem', fontWeight: 700, color: GREEN, marginBottom: '12px' }}>
-              Zero Seed Phrase
-            </h3>
-            <p style={{ fontSize: '0.95rem', color: 'rgba(255, 255, 255, 0.7)', lineHeight: 1.6 }}>
-              Nessuna <GlossaryTerm termId="seed-phrase">{t('common:terms.seedPhrase')}</GlossaryTerm> da 
-              scrivere o ricordare per sempre
-            </p>
-          </div>
-          
-          <div style={cardStyle}>
-            <div style={{ fontSize: '3rem', marginBottom: '16px' }}>💰</div>
-            <h3 style={{ fontSize: '1.25rem', fontWeight: 700, color: GREEN, marginBottom: '12px' }}>
-              Zero Gas Fee
-            </h3>
-            <p style={{ fontSize: '0.95rem', color: 'rgba(255, 255, 255, 0.7)', lineHeight: 1.6 }}>
-              Niente <GlossaryTerm termId="gas-fee">{t('common:terms.gasFee')}</GlossaryTerm> incomprensibili, 
-              paghi solo sul venduto
-            </p>
-          </div>
+          {pillars.map((pillar, i) => (
+            <div key={i} style={{
+              background: 'rgba(30,30,40,0.6)',
+              border: `1px solid ${[PURPLE, GOLD, GREEN][i]}40`,
+              borderRadius: '20px',
+              padding: '32px 28px',
+              textAlign: 'center'
+            }}>
+              <div style={{ fontSize: '3rem', marginBottom: '16px' }}>{pillar.icon}</div>
+              <h3 style={{
+                fontSize: '1.15rem',
+                fontWeight: 700,
+                color: [PURPLE, GOLD, GREEN][i],
+                marginBottom: '12px'
+              }}>
+                {pillar.title}
+              </h3>
+              <p style={{
+                fontSize: '0.9rem',
+                color: 'rgba(255,255,255,0.65)',
+                lineHeight: 1.65
+              }}>
+                {pillar.desc}
+              </p>
+            </div>
+          ))}
         </div>
 
-        {/* Sotto il cofano */}
+        {/* Highlights numerici */}
         <div style={{
-          background: `linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, rgba(168, 85, 247, 0.1) 100%)`,
-          border: `1px solid rgba(212, 175, 55, 0.3)`,
-          borderRadius: '24px',
-          padding: '40px'
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))',
+          gap: '16px',
+          marginBottom: '40px'
         }}>
-          <h2 style={{
-            fontSize: '1.5rem',
-            fontWeight: 700,
-            color: '#ffffff',
-            marginBottom: '30px',
-            display: 'flex',
-            alignItems: 'center',
-            gap: '12px'
-          }}>
-            <span style={{ fontSize: '1.75rem' }}>⚙️</span>
-            Sotto il cofano
-          </h2>
-          
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-            gap: '20px'
-          }}>
-            {[
-              { term: 'algorand', text: 'Algorand', desc: 'Blockchain carbon-negative' },
-              { term: 'natan', text: 'NATAN', desc: 'AI per valutazione e suggerimenti' },
-              { term: 'smart-contract', text: 'Smart Contract', desc: 'Royalty automatiche per sempre' },
-              { term: 'ipfs', text: 'IPFS', desc: 'Storage decentralizzato permanente' },
-              { term: 'gdpr', text: 'GDPR', desc: 'by design - Privacy garantita' },
-              { term: 'mica', text: 'MiCA', desc: '-safe - Compliance normativa' }
-            ].map((item, i) => (
-              <div key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
-                <span style={{ color: GOLD, fontSize: '1.25rem' }}>✓</span>
-                <span style={{ color: 'rgba(255, 255, 255, 0.85)', fontSize: '1rem' }}>
-                  <GlossaryTerm termId={item.term}>{item.text}</GlossaryTerm>
-                  {' - '}{item.desc}
-                </span>
+          {highlights.map((h, i) => (
+            <div key={i} style={{
+              background: 'rgba(212,175,55,0.06)',
+              border: '1px solid rgba(212,175,55,0.2)',
+              borderRadius: '16px',
+              padding: '24px 16px',
+              textAlign: 'center'
+            }}>
+              <div style={{
+                fontSize: 'clamp(1.8rem, 4vw, 2.5rem)',
+                fontWeight: 800,
+                color: GOLD,
+                lineHeight: 1,
+                marginBottom: '8px'
+              }}>
+                {h.value}
               </div>
-            ))}
-          </div>
+              <div style={{
+                fontSize: '0.78rem',
+                color: 'rgba(255,255,255,0.55)',
+                fontWeight: 500,
+                letterSpacing: '0.04em',
+                textTransform: 'uppercase' as const
+              }}>
+                {h.label}
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Nota finale */}
+        <div style={{
+          textAlign: 'center',
+          padding: '20px',
+          borderTop: '1px solid rgba(255,255,255,0.08)'
+        }}>
+          <p style={{
+            fontSize: '0.85rem',
+            color: 'rgba(255,255,255,0.35)',
+            letterSpacing: '0.06em'
+          }}>
+            {t('whatWeDo.note')}
+          </p>
         </div>
 
       </div>

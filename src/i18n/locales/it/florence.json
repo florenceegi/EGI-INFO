@@ -1826,16 +1826,47 @@
     "micaCompliant": "MiCA Compliant"
   },
   "whatWeDo": {
-    "techTitle": "La complessità della tecnologia resa invisibile",
-    "chainLabel": "Blockchain",
-    "aiLabel": "Intelligenza Artificiale",
-    "systemDesc": "in un sistema così semplice che chiunque può usarlo.",
-    "behindTitle": "Dietro c'è",
-    "algorandLabel": "Algorand",
-    "natanLabel": "NATAN AI",
-    "carbonNegative": "Blockchain carbon-negative",
-    "madeInItaly": "Made in Italy",
-    "florentineDesign": "Design fiorentino"
+    "badge": "Chi siamo",
+    "title": "FlorenceEGI restituisce verità, riconoscimento e valore reale al mondo digitale",
+    "intro": "Non siamo un marketplace. Siamo un'infrastruttura: certifichiamo, proteggiamo e rendiamo liquidi i tuoi asset reali — arte, documenti, prodotti, idee — su blockchain Algorand.",
+    "body1": "Ogni EGI (Eco Goods Invent) è un certificato digitale che unisce tre cose inscindibili: il tuo bene, royalty perpetue automatiche, e il finanziamento diretto di progetti ambientali verificati. Non custodiamo fondi. Non gestiamo crypto. Paghi in euro, il valore si genera da solo.",
+    "body2": "Il luogo dove un'opera diventa vera perché qualcuno la crea, la riconosce e la completa. L'artista genera la forma, ma è l'incontro con il mecenate che attiva la sua piena esistenza. Ogni transazione imprime per sempre nella blockchain i nomi di chi ha creato e di chi ha scelto di credere in quell'opera.",
+    "pillars": [
+      {
+        "icon": "🎨",
+        "title": "Valore Estetico",
+        "desc": "Qualsiasi bene frutto dell'ingegno umano: arte fisica, digitale, design, musica, documenti, proprietà intellettuale."
+      },
+      {
+        "icon": "⛓️",
+        "title": "Traccia Immutabile",
+        "desc": "Certificate of Authenticity (CoA) su Algorand. Hash crittografico SHA-256 + timestamp permanente. Verifica pubblica con QR — senza login."
+      },
+      {
+        "icon": "🌱",
+        "title": "Impatto Ambientale",
+        "desc": "Il 20% di ogni transazione finanzia automaticamente uno dei tre programmi EPP: Riforestazione, Rimozione Plastica Acquatica, Protezione delle Api."
+      }
+    ],
+    "highlights": [
+      {
+        "value": "4.5%",
+        "label": "Royalty perpetue al Creator"
+      },
+      {
+        "value": "20%",
+        "label": "A progetti ambientali verificati"
+      },
+      {
+        "value": "0€",
+        "label": "Costi iniziali"
+      },
+      {
+        "value": "4.5s",
+        "label": "Finalità blockchain Algorand"
+      }
+    ],
+    "note": "GDPR by design · MiCA-safe · Zero costi iniziali · Pagamenti in euro"
   },
   "fondamenti": {
     "title": "Fondamenti e Visione",
