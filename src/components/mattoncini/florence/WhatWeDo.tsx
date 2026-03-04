@@ -64,7 +64,7 @@ const WhatWeDo: React.FC = () => {
           <h1 style={{
             fontSize: 'clamp(1.8rem, 4.5vw, 3rem)',
             fontWeight: 800,
-            color: '#ffffff',
+            color: GOLD,
             marginBottom: '28px',
             lineHeight: 1.25,
             maxWidth: '780px',
