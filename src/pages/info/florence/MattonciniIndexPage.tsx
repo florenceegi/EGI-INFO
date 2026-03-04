@@ -10,8 +10,9 @@
  * - Monitoraggio progresso
  */
 
-import React
-import { useTranslation } from 'react-i18next';, { useState, useMemo } from 'react';
+import React, { useState, useMemo } from 'react';
+import { useTranslation } from 'react-i18next';
+
 import { getUsedInPages, type MattonciniSlug } from '@/config/assemblies';
 import { PAGES } from '@/config/pages';
 import { Link } from 'react-router-dom';
@@ -158,7 +159,7 @@ const TAG_LABELS: Record<string, string> = Object.fromEntries(
 // ============================================================================
 
 const MattonciniIndexPage: React.FC = () => {
-  const { t } = useTranslation(\'florence\');
+  const { t } = useTranslation('florence');
   const [activeCategory, setActiveCategory] = useState('Tutti');
   const [searchQuery, setSearchQuery] = useState('');
 
