@@ -136,12 +136,12 @@ export interface WebPageSchema {
   mainEntity?: ArticleSchema | ProductSchema | FAQSchema;
 }
 
-type SchemaType = 
-  | OrganizationSchema 
-  | ArticleSchema 
-  | ProductSchema 
-  | FAQSchema 
-  | HowToSchema 
+type SchemaType =
+  | OrganizationSchema
+  | ArticleSchema
+  | ProductSchema
+  | FAQSchema
+  | HowToSchema
   | BreadcrumbSchema
   | SoftwareApplicationSchema
   | WebPageSchema;
@@ -160,25 +160,25 @@ interface JsonLdProps {
 export function JsonLd({ schema }: JsonLdProps) {
   useEffect(() => {
     const scriptId = 'schema-org-jsonld';
-    
+
     // Remove existing script if any
     const existingScript = document.getElementById(scriptId);
     if (existingScript) {
       existingScript.remove();
     }
-    
+
     // Create new script element
     const script = document.createElement('script');
     script.id = scriptId;
     script.type = 'application/ld+json';
-    
-    const jsonLd = Array.isArray(schema) 
+
+    const jsonLd = Array.isArray(schema)
       ? schema.map(s => ({ '@context': 'https://schema.org', ...s }))
       : { '@context': 'https://schema.org', ...schema };
-    
+
     script.textContent = JSON.stringify(jsonLd, null, 0);
     document.head.appendChild(script);
-    
+
     return () => {
       const scriptToRemove = document.getElementById(scriptId);
       if (scriptToRemove) {
@@ -186,7 +186,7 @@ export function JsonLd({ schema }: JsonLdProps) {
       }
     };
   }, [schema]);
-  
+
   return null;
 }
 
@@ -195,7 +195,7 @@ export function JsonLd({ schema }: JsonLdProps) {
 // ============================================
 
 const BASE_URL = 'https://florenceegi.com';
-const ORG_NAME = t('meta.title');
+const ORG_NAME = 'FlorenceEGI';
 const ORG_LOGO = `${BASE_URL}/images/logo.png`;
 
 /**
@@ -311,7 +311,7 @@ export function createBreadcrumbSchema(
 export function createSoftwareSchema(): SoftwareApplicationSchema {
   return {
     '@type': 'SoftwareApplication',
-    name: t('meta.title'),
+    name: ORG_NAME,
     description: 'Piattaforma SaaS per la certificazione digitale di opere d\'arte con blockchain Algorand e contributo ambientale automatico',
     applicationCategory: 'BusinessApplication',
     operatingSystem: 'Web',
@@ -343,7 +343,7 @@ export function createWebPageSchema(params: {
       name: ORG_NAME,
       url: BASE_URL,
     },
-    breadcrumb: params.breadcrumbs 
+    breadcrumb: params.breadcrumbs
       ? createBreadcrumbSchema(params.breadcrumbs)
       : undefined,
     mainEntity: params.mainEntity,
