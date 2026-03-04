@@ -628,6 +628,24 @@
         "title": "Bee Population Enhancement",
         "description": "Bees, the silent architects of our planet's biodiversity, are in alarming decline. A third of our food depends on their existence! Solution: enhancement of bee populations in our ecosystem of interest to increase their numbers, thus supporting their biodiversity and pollination."
       }
+    ],
+    "highlights": [
+      {
+        "icon": "🔒",
+        "text": "Each transaction leaves an anchor hash on Algorand: on-chain notarization ensures public traceability, not fund distribution (managed off-chain by the PSP)"
+      },
+      {
+        "icon": "🌐",
+        "text": "Every contribution verifiable on Algorand Explorer"
+      },
+      {
+        "icon": "⚖️",
+        "text": "Projects selected by APS (not by the company)"
+      },
+      {
+        "icon": "📋",
+        "text": "Quarterly public report"
+      }
     ]
   }
 }

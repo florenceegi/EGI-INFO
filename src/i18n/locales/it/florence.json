@@ -1382,7 +1382,7 @@
     "highlights": [
       {
         "icon": "🔒",
-        "text": "Smart contract: la distribuzione è automatica e immutabile"
+        "text": "Ogni transazione lascia un anchor hash su Algorand: la notarizzazione on-chain garantisce tracciabilità pubblica, non la distribuzione dei fondi (gestita off-chain dal PSP)"
       },
       {
         "icon": "🌐",
