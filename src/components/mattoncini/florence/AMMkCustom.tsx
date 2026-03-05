@@ -16,7 +16,7 @@ const AMMkCustom: React.FC = () => {
     desc: string;
   }>;
 
-  
+
 
   const ICONS = ['🎨', '💵', '🔒', '⚡'];
 
@@ -34,7 +34,7 @@ const AMMkCustom: React.FC = () => {
         </header>
 
         <div className="ammk-custom__grid">
-          {customization.map((item, index) => (
+          {customData.map((item, index) => (
             <div key={index} className="ammk-custom__card">
               <div className="ammk-custom__card-header">
                 <span className="ammk-custom__card-icon">{ICONS[index]}</span>
@@ -47,7 +47,7 @@ const AMMkCustom: React.FC = () => {
 
         <div className="ammk-custom__cta">
           <h3>{t('ammk.ctaTitle')}</h3>
-          <p>{t('ammk.ctaSubtitle', 'Inizia oggi e trasforma qualsiasi asset in un\'opportunità di valore.')}</p>
+          <p>{t('ammk.ctaSubtitle')}</p>
           <button className="ammk-custom__btn">
             {t('ammk.ctaButton')} →
           </button>
