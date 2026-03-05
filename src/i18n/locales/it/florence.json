@@ -1002,7 +1002,8 @@
     "tagline": "Tecnologia invisibile, risultati visibili.",
     "userSubtitle": "Semplicità senza compromessi",
     "eventBus": "Event Bus pub/sub",
-    "enterprisePower": "Potenza enterprise invisibile"
+    "enterprisePower": "Potenza enterprise invisibile",
+    "algorandFullDesc": "Blockchain carbon-negative, 1000 transazioni al secondo, finalità 4,5s, Proof-of-Stake pura in meno di 5 secondi, costo medio €0.001 per transazione."
   },
   "payments": {
     "title": "Inclusione Finanziaria Totale",

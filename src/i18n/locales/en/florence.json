@@ -267,7 +267,8 @@
     "tagline": "Invisible technology, visible results.",
     "userSubtitle": "Simplicity without compromise",
     "eventBus": "Event Bus pub/sub",
-    "enterprisePower": "Invisible enterprise power"
+    "enterprisePower": "Invisible enterprise power",
+    "algorandFullDesc": "Carbon-negative blockchain, 1000 transactions per second, 4.5s finality, pure Proof-of-Stake in under 5 seconds, average cost €0.001 per transaction."
   },
   "pricing": {
     "secondary": {

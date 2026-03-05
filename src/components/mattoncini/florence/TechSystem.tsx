@@ -17,7 +17,7 @@ const TechSystem: React.FC = () => {
     desc: string;
   }>;
 
-  
+
 
   const ICONS = ['⛓️', '📜', '📋', '🔐', '☁️', '🤖', '📡', '👁️'];
 
@@ -27,10 +27,10 @@ const TechSystem: React.FC = () => {
         <header className="tech-system__header">
           <span className="tech-system__badge">⚙️ Backend</span>
           <h2 className="tech-system__title">
-            {t('technology.systemColumnTitle', t('technology.systemColumnTitle'))}
+            {t('technology.systemColumnTitle')}
           </h2>
           <p className="tech-system__subtitle">
-            t('technology.enterprisePower')
+            {t('technology.enterprisePower')}
           </p>
         </header>
 
@@ -51,7 +51,7 @@ const TechSystem: React.FC = () => {
           <div className="tech-system__highlight-content">
             <h4>Powered by <GlossaryTerm termId="algorand">{t('technology.algorandLabel')}</GlossaryTerm></h4>
             <p>
-              Blockchain carbon-negative, {t('technology.algorandDesc')} in meno di 5 secondi, costo medio €0.001 per transazione.
+              {t('technology.algorandFullDesc')}
             </p>
           </div>
         </div>
