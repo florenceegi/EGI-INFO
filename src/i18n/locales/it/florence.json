@@ -1022,11 +1022,6 @@
         "title": "Accetto Crypto (PSP Partner)",
         "desc": "Pagamento in crypto (USDCa, EURC, USDT) tramite PSP partner autorizzato (CASP/EMI). FlorenceEGI non tocca mai i fondi crypto.",
         "target": "Crypto-native"
-      },
-      {
-        "title": "Pagamento con Egili",
-        "desc": "Utilizzo degli Egili guadagnati (1 Egilo = €0,01 valore percepito interno). Non trasferibili, non quotati, MiCA-safe come punti fedeltà.",
-        "target": "Utenti attivi dell'ecosistema"
       }
     ],
     "badge": "Sistemi di pagamento",
@@ -1088,30 +1083,6 @@
       "step3": "Il settlement è gestito dal Partner con reportistica conforme MiCA.",
       "step4": "Riceve i fondi tramite il circuito del Partner (SEPA, bonifico istituzionale).",
       "micaSafe": "MiCA-safe"
-    },
-    "level4": {
-      "badge": "🪙 Livello 4",
-      "title": "Pagamento con EGILI",
-      "subtitle": "Il Creator abilita gli EGILI come forma di pagamento per i propri EGI",
-      "desc": "Un sistema innovativo dove i token utility EGILI possono essere usati come mezzo di scambio all'interno della piattaforma.",
-      "step1": "Accumula EGILI attraverso attività meritevoli (vendite, referral, partecipazione community).",
-      "step2": "Al checkout vede l'opzione \"Paga con EGILI\" (solo se abilitata dal Creator).",
-      "step3": "Il sistema verifica il saldo: se sufficiente, l'opzione è disponibile.",
-      "step4": "Gli EGILI vengono bruciati (rimossi definitivamente dalla circolazione).",
-      "step5": "Riceve un regalo in EGILI Gift dalla piattaforma, equivalente agli EGILI bruciati dal Buyer.",
-      "egiliDesc": "EGILI è il token utility interno della piattaforma.",
-      "notTransferable": "Non trasferibile: Non può essere ceduto o venduto.",
-      "notQuoted": "Non quotato: Nessuna quotazione su exchange.",
-      "accountBound": "Account-bound: Legato all'account utente.",
-      "meritBased": "Merit-based: Si guadagna con attività meritevoli.",
-      "burnRate": "Tasso di conversione: Trasparente e fisso.",
-      "earnTitle": "Come guadagnare EGILI:",
-      "earn1": "Volume vendite: Il Creator guadagna EGILI proporzionalmente alle vendite.",
-      "earn2": "Referral verificati: Bonus EGILI per ogni nuovo Creator introdotto.",
-      "earn3": "Donazioni EPP volontarie: Extra EGILI per chi contribuisce agli EPP.",
-      "earn4": "Partecipazione community: Presenza forum, beta testing, contributi.",
-      "earn5": "Fondo distributivo: Una quota degli EGILI Gift ricevuti dal Creator.",
-      "flowTitle": "Il Flusso Completo del Pagamento EGILI"
     },
     "royaltiesLabel": "royalties",
     "custodireCrypto": "Custodire criptovalute per terzi.",
