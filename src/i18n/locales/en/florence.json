@@ -101,7 +101,11 @@
         }
       ]
     },
-    "eventBus": "Event Bus pub/sub"
+    "eventBus": "Event Bus pub/sub",
+    "customRoadmapBadge": "🗺️ Roadmap",
+    "customRoadmapTitle": "Customization — Coming soon",
+    "customRoadmapNotice": "These features are currently in design phase and are not yet available. Marketplace customizations will be activatable in a future release.",
+    "customRoadmapCta": "Want to be notified when available? Contact us →"
   },
   "natan": {
     "title": "NATAN - Your AI Assistant",

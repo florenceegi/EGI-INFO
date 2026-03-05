@@ -23,22 +23,33 @@ const AMMkCustom: React.FC = () => {
   return (
     <section className="ammk-custom">
       <div className="ammk-custom__container">
-        <header className="ammk-custom__header">
-          <span className="ammk-custom__badge">✨ Personalizzazione</span>
-          <h2 className="ammk-custom__title">
-            {t('ammk.customizationTitle')}
+
+        {/* ── BANNER ROADMAP ─────────────────────────────────────────── */}
+        <div className="ammk-custom__roadmap-banner">
+          <span className="ammk-custom__roadmap-badge">
+            {t('ammk.customRoadmapBadge')}
+          </span>
+          <h2 className="ammk-custom__roadmap-title">
+            {t('ammk.customRoadmapTitle')}
           </h2>
-          <p className="ammk-custom__subtitle">
-            {t('ammk.customizationSubtitle')}
+          <p className="ammk-custom__roadmap-notice">
+            {t('ammk.customRoadmapNotice')}
           </p>
+        </div>
+
+        <header className="ammk-custom__header">
+          <h3 className="ammk-custom__title" style={{ opacity: 0.5 }}>
+            {t('ammk.customizationSubtitle')}
+          </h3>
         </header>
 
-        <div className="ammk-custom__grid">
+        {/* Card future — opache per indicare "non ancora disponibile" */}
+        <div className="ammk-custom__grid" style={{ opacity: 0.45, pointerEvents: 'none' }}>
           {customData.map((item, index) => (
             <div key={index} className="ammk-custom__card">
               <div className="ammk-custom__card-header">
                 <span className="ammk-custom__card-icon">{ICONS[index]}</span>
-                <h3 className="ammk-custom__card-title">{item.title}</h3>
+                <h4 className="ammk-custom__card-title">{item.title}</h4>
               </div>
               <p className="ammk-custom__card-desc">{item.desc}</p>
             </div>
@@ -46,11 +57,7 @@ const AMMkCustom: React.FC = () => {
         </div>
 
         <div className="ammk-custom__cta">
-          <h3>{t('ammk.ctaTitle')}</h3>
-          <p>{t('ammk.ctaSubtitle')}</p>
-          <button className="ammk-custom__btn">
-            {t('ammk.ctaButton')} →
-          </button>
+          <p>{t('ammk.customRoadmapCta')}</p>
         </div>
       </div>
 
@@ -61,7 +68,42 @@ const AMMkCustom: React.FC = () => {
           color: #e0e0e0;
         }
         .ammk-custom__container { max-width: 800px; margin: 0 auto; }
-        .ammk-custom__header { text-align: center; margin-bottom: 3rem; }
+        .ammk-custom__roadmap-banner {
+          text-align: center;
+          background: rgba(251,191,36,0.08);
+          border: 2px solid rgba(251,191,36,0.4);
+          border-radius: 16px;
+          padding: 2rem 1.5rem;
+          margin-bottom: 2.5rem;
+        }
+        .ammk-custom__roadmap-badge {
+          display: inline-block;
+          background: rgba(251,191,36,0.15);
+          color: #fbbf24;
+          padding: 0.4rem 1rem;
+          border-radius: 20px;
+          font-size: 0.8rem;
+          font-weight: 700;
+          letter-spacing: 0.08em;
+          text-transform: uppercase;
+          margin-bottom: 0.75rem;
+        }
+        .ammk-custom__roadmap-title {
+          font-size: 1.4rem;
+          font-weight: 700;
+          color: #fbbf24;
+          margin: 0 0 0.75rem 0;
+        }
+        .ammk-custom__roadmap-notice {
+          color: rgba(255,255,255,0.65);
+          font-size: 0.95rem;
+          line-height: 1.6;
+          margin: 0;
+          max-width: 580px;
+          margin: 0 auto;
+        }
+        .ammk-custom__header { text-align: center; margin-bottom: 2rem; }
+
         .ammk-custom__badge {
           display: inline-block;
           background: rgba(212, 175, 55, 0.15);

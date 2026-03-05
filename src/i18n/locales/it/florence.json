@@ -904,7 +904,11 @@
         }
       ]
     },
-    "eventBus": "Event Bus pub/sub"
+    "eventBus": "Event Bus pub/sub",
+    "customRoadmapBadge": "🗺️ Roadmap",
+    "customRoadmapTitle": "Personalizzazioni — In arrivo",
+    "customRoadmapNotice": "Queste funzionalità sono in fase di progettazione e non sono ancora disponibili. Le personalizzazioni del marketplace saranno attivabili in una release futura.",
+    "customRoadmapCta": "Vuoi essere notificato quando sarà disponibile? Contattaci →"
   },
   "technology": {
     "titleLine1": "Stack Enterprise,",
