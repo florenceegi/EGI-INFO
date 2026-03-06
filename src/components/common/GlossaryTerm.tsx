@@ -1,4 +1,5 @@
-import React, { useId, useCallback, useState, type KeyboardEvent } from 'react';
+import React, { useId, useCallback, useState, useRef, useEffect, type KeyboardEvent } from 'react';
+import { createPortal } from 'react-dom';
 import { useTranslation } from 'react-i18next';
 import { useGlossary } from '../../context/GlossaryContext';
 
@@ -37,22 +38,34 @@ export const GlossaryTerm: React.FC<GlossaryTermProps> = ({
   const { navigateToTerm } = useGlossary();
   const uniqueId = useId();
   const [isHovered, setIsHovered] = useState(false);
-  
+  const spanRef = useRef<HTMLSpanElement>(null);
+  const [tooltipPos, setTooltipPos] = useState({ top: 0, left: 0 });
+
+  useEffect(() => {
+    if (isHovered && spanRef.current) {
+      const rect = spanRef.current.getBoundingClientRect();
+      setTooltipPos({
+        top: rect.top + window.scrollY - 10,  // appena sopra il termine
+        left: rect.left + rect.width / 2,
+      });
+    }
+  }, [isHovered]);
+
   const key = termKey || termId;
   const sourceId = `glossary-source-${key.replace(/\./g, '-')}-${uniqueId}`;
 
   const termData = t(`terms.${key}`, { returnObjects: true, defaultValue: null });
-  
+
   let definition = '';
   let termName = '';
-  
+
   if (typeof termData === 'object' && termData !== null) {
     definition = (termData as { definition?: string }).definition || '';
     termName = (termData as { term?: string }).term || '';
   } else if (typeof termData === 'string') {
     definition = termData;
   }
-  
+
   if (!definition && namespace === 'glossary-art') {
     const artData = t(key, { returnObjects: true, defaultValue: null });
     if (typeof artData === 'object' && artData !== null) {
@@ -60,7 +73,7 @@ export const GlossaryTerm: React.FC<GlossaryTermProps> = ({
       termName = (artData as { term?: string }).term || '';
     }
   }
-  
+
   const handleClick = useCallback((e: React.MouseEvent) => {
     e.preventDefault();
     if (!disabled && definition) {
@@ -89,51 +102,12 @@ export const GlossaryTerm: React.FC<GlossaryTermProps> = ({
     transition: 'color 0.2s, text-decoration-color 0.2s'
   };
 
-  // Stile tooltip
-  const tooltipStyle: React.CSSProperties = {
-    visibility: isHovered ? 'visible' : 'hidden',
-    opacity: isHovered ? 1 : 0,
-    position: 'absolute',
-    zIndex: 9999,
-    bottom: '100%',
-    left: '50%',
-    transform: 'translateX(-50%)',
-    marginBottom: '10px',
-    padding: '12px 16px',
-    maxWidth: '320px',
-    minWidth: '200px',
-    background: 'rgba(20, 20, 30, 0.98)',
-    backdropFilter: 'blur(8px)',
-    color: '#ffffff',
-    fontSize: '0.875rem',
-    fontWeight: 400,
-    lineHeight: 1.5,
-    borderRadius: '10px',
-    boxShadow: '0 10px 40px rgba(0,0,0,0.5)',
-    border: `1px solid ${GOLD}40`,
-    pointerEvents: 'none',
-    transition: 'opacity 0.2s, visibility 0.2s',
-    whiteSpace: 'normal',
-    textAlign: 'left'
-  };
 
-  // Arrow del tooltip
-  const arrowStyle: React.CSSProperties = {
-    position: 'absolute',
-    top: '100%',
-    left: '50%',
-    transform: 'translateX(-50%)',
-    width: 0,
-    height: 0,
-    borderLeft: '8px solid transparent',
-    borderRight: '8px solid transparent',
-    borderTop: '8px solid rgba(20, 20, 30, 0.98)'
-  };
-  
+
   // Se non c'è definizione, render comunque VISIBILE
   if (!definition) {
     return (
-      <span 
+      <span
         style={baseStyle}
         title="Termine non trovato nel glossario"
         className={className}
@@ -143,8 +117,57 @@ export const GlossaryTerm: React.FC<GlossaryTermProps> = ({
     );
   }
 
+  const tooltipPortal = showTooltip && isHovered ? createPortal(
+    <span
+      id={`tooltip-${sourceId}`}
+      role="tooltip"
+      style={{
+        position: 'fixed',
+        top: `${tooltipPos.top}px`,
+        left: `${tooltipPos.left}px`,
+        transform: 'translate(-50%, -100%)',
+        marginBottom: '10px',
+        padding: '12px 16px',
+        maxWidth: '320px',
+        minWidth: '200px',
+        background: 'rgba(20, 20, 30, 0.98)',
+        backdropFilter: 'blur(8px)',
+        color: '#ffffff',
+        fontSize: '0.875rem',
+        fontWeight: 400,
+        lineHeight: 1.5,
+        borderRadius: '10px',
+        boxShadow: '0 10px 40px rgba(0,0,0,0.5)',
+        border: `1px solid ${GOLD}40`,
+        pointerEvents: 'none',
+        zIndex: 99999,
+        whiteSpace: 'normal',
+        textAlign: 'left',
+      }}
+    >
+      <strong style={{ color: GOLD, display: 'block', marginBottom: '6px' }}>
+        {termName || children}
+      </strong>
+      {definition.length > 200 ? `${definition.substring(0, 200)}...` : definition}
+      {/* Arrow */}
+      <span style={{
+        position: 'absolute',
+        top: '100%',
+        left: '50%',
+        transform: 'translateX(-50%)',
+        width: 0,
+        height: 0,
+        borderLeft: '8px solid transparent',
+        borderRight: '8px solid transparent',
+        borderTop: '8px solid rgba(20, 20, 30, 0.98)'
+      }} />
+    </span>,
+    document.body
+  ) : null;
+
   return (
     <span
+      ref={spanRef}
       id={sourceId}
       role="button"
       tabIndex={disabled ? -1 : 0}
@@ -160,21 +183,7 @@ export const GlossaryTerm: React.FC<GlossaryTermProps> = ({
       data-term-key={key}
     >
       {children}
-      
-      {/* Tooltip */}
-      {showTooltip && (
-        <span
-          id={`tooltip-${sourceId}`}
-          role="tooltip"
-          style={tooltipStyle}
-        >
-          <strong style={{ color: GOLD, display: 'block', marginBottom: '6px' }}>
-            {termName || children}
-          </strong>
-          {definition.length > 200 ? `${definition.substring(0, 200)}...` : definition}
-          <span style={arrowStyle} />
-        </span>
-      )}
+      {tooltipPortal}
     </span>
   );
 };
@@ -206,7 +215,7 @@ export const ArtTerm: React.FC<ArtTermProps> = ({
 }) => {
   // Build full path for glossary-art namespace
   const fullPath = `${category}.${subcategory}.${termKey}`;
-  
+
   return (
     <GlossaryTerm
       termId={fullPath}
