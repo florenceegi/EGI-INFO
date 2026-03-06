@@ -1139,7 +1139,22 @@
         "name": "EPP",
         "desc": "Environmental Protection Project: riceve automaticamente il 20% su ogni vendita primaria (profilo Contributor). Progetti ambientali verificati: riforestazione, riduzione plastica. Scelti e verificati dall'APS (Frangette)."
       }
-    ]
+    ],
+    "badge": "🔄 Ecosistema",
+    "subtitle": "Un sistema circolare dove ogni ruolo alimenta il successivo",
+    "rolesLabel": "I 4 ruoli dell'ecosistema",
+    "flowTitle": "Il Flusso del Valore",
+    "flowLabel": "Flusso del valore nell'ecosistema",
+    "flow1": "Creator minta l'EGI",
+    "flow2": "Co-Creatore lo attiva",
+    "flow3": "Collector acquista",
+    "flow4": "EPP riceve il 20%",
+    "flow5": "Valore generato",
+    "highlightsLabel": "Vantaggi dell'ecosistema",
+    "h1": "Royalty perpetue al Creator",
+    "h2": "Certificazione immutabile",
+    "h3": "Apprezzamento nel tempo",
+    "h4": "Impatto ambientale certificato"
   },
   "natan": {
     "title": "NATAN AI",
