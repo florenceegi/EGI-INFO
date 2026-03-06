@@ -110,9 +110,26 @@
   "natan": {
     "title": "NATAN - Your AI Assistant",
     "subtitle": "Artificial Intelligence at your service",
-    "description": "NATAN (Navigational AI Technical Assistant Navigator) is the intelligent assistant that guides you through the FlorenceEGI ecosystem.",
+    "description": "Neural Adaptive Thinking & Activation Network. FlorenceEGI's native AI: not a generic chatbot, but a cognitive system built on the platform's values, data and processes.",
     "valuationLabel": "Valuation",
-    "marketEngineLabel": "Market Engine"
+    "marketEngineLabel": "Market Engine",
+    "badge": "🤖 NATAN AI",
+    "featuresLabel": "Core capabilities",
+    "capabilitiesLabel": "Advanced features",
+    "principlesLabel": "Founding principles",
+    "p1Title": "OS3 by design",
+    "p1Desc": "Every answer is traceable, every decision is explainable. No black box.",
+    "p2Title": "Personalised recommendations",
+    "p2Desc": "Learns from your style, your values and your choices — not from a generic model.",
+    "p3Title": "Market analysis",
+    "p3Desc": "Dynamic pricing based on demand, rarity and sales history. Real-time floor price.",
+    "p4Title": "GDPR integrated",
+    "p4Desc": "ConsentService with versioning, ULM logging, user rights Art. 15-20: access, portability, erasure.",
+    "ragTitle": "RAG — Retrieval-Augmented Generation",
+    "ragDesc": "Intelligent search + generation on authenticated documents. NATAN retrieves only verified, source-cited information.",
+    "valuationTitle": "Valuation Engine",
+    "valuationDesc": "Real-time EGI value estimate: transaction history, trait rarity, market demand, sector benchmarks.",
+    "marketDesc": "Campaign activation layer: identifies potential collectors, optimises artwork visibility, suggests timing and price — always with explicit consent."
   },
   "cta": {
     "title": "Ready for the Digital Renaissance?",
