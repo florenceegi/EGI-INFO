@@ -101,12 +101,10 @@ const routes: RouteObject[] = [
         index: true,
         element: <HomePage />,
       },
+      { path: 'privacy', element: <PrivacyPolicyPage /> },
+      { path: 'terms',   element: <TermsPage /> },
     ],
   },
-
-  // === LEGAL ===
-  { path: '/privacy', element: <PrivacyPolicyPage /> },
-  { path: '/terms',   element: <TermsPage /> },
 
   // === INFO - Approfondimenti ===
   {
