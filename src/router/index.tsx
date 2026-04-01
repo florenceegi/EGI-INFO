@@ -7,6 +7,10 @@ import InfoPageLayout from '../layouts/InfoPageLayout';
 // Pages - Home
 import HomePage from '../pages/HomePage';
 
+// Pages - Legal
+import { PrivacyPolicyPage } from '../pages/PrivacyPolicyPage';
+import { TermsPage } from '../pages/TermsPage';
+
 // Pages - Approfondimenti (Deep Dive)
 import ApprofondimentiHome from '../pages/info/ApprofondimentiHome';
 import EGIInfoPage from '../pages/info/EGIInfoPage';
@@ -99,6 +103,10 @@ const routes: RouteObject[] = [
       },
     ],
   },
+
+  // === LEGAL ===
+  { path: '/privacy', element: <PrivacyPolicyPage /> },
+  { path: '/terms',   element: <TermsPage /> },
 
   // === INFO - Approfondimenti ===
   {
