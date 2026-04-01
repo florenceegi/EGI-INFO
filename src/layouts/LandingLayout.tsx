@@ -1,16 +1,24 @@
+/**
+ * @package EGI-INFO — LandingLayout
+ * @author Padmin D. Curtis (AI Partner OS3.0) for Fabio Cherici
+ * @version 1.2.0 (FlorenceEGI — EGI-INFO)
+ * @date 2026-03-31
+ * @purpose Layout principale per Home e pagine audience — v1.2.0: LSO Web Component.
+ */
+
 import React from 'react';
 import { Outlet } from 'react-router-dom';
 import { GlossaryProvider } from '../context/GlossaryContext';
 import { BackToTextButton } from '../components/common';
-import LsoEcosystem from '../components/LsoEcosystem';
 
-/**
- * @package EGI-INFO — LandingLayout
- * @author Padmin D. Curtis (AI Partner OS3.0) for Fabio Cherici
- * @version 1.1.0 (FlorenceEGI — EGI-INFO)
- * @date 2026-03-31
- * @purpose Layout principale per Home e pagine audience — v1.1.0: LsoEcosystem sub-footer.
- */
+// TypeScript declaration per Web Component LSO
+declare global {
+  namespace JSX {
+    interface IntrinsicElements {
+      'lso-ecosystem': React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & { current?: string };
+    }
+  }
+}
 
 interface LandingLayoutProps {
   variant?: 'default' | 'audience';
@@ -55,8 +63,9 @@ const LandingLayout: React.FC<LandingLayoutProps> = ({ variant = 'default' }) =>
           <Outlet />
         </main>
 
-        {/* LSO Ecosystem sub-footer */}
-        <LsoEcosystem />
+        {/* Script: <script src="https://florenceegi.com/lso-ecosystem.js" defer> in index.html */}
+        {/* LSO Ecosystem Web Component */}
+        <lso-ecosystem current="info" />
 
         {/* Footer */}
         <footer className="bg-dark-lighter border-t border-white/5">
