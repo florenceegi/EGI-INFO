@@ -71,10 +71,7 @@ const LandingLayout: React.FC<LandingLayoutProps> = ({ variant = 'default' }) =>
         <footer className="bg-dark-lighter border-t border-white/5">
           <div className="container mx-auto px-6 py-8">
             <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-              <p className="text-white/50 text-sm">
-                © {new Date().getFullYear()} FlorenceEGI. Tutti i diritti riservati.
-              </p>
-              <nav className="flex gap-6 text-sm">
+<nav className="flex gap-6 text-sm">
                 <a href="/privacy" className="text-white/50 hover:text-gold transition-colors">
                   Privacy Policy
                 </a>
