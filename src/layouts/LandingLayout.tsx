@@ -2,13 +2,14 @@ import React from 'react';
 import { Outlet } from 'react-router-dom';
 import { GlossaryProvider } from '../context/GlossaryContext';
 import { BackToTextButton } from '../components/common';
+import LsoEcosystem from '../components/LsoEcosystem';
 
 /**
- * LandingLayout - Layout principale per la Home e pagine audience
- * 
- * Varianti:
- * - default: Home con WheelMenu in stile HANDOFF
- * - audience: Pagine per tipo di utente (artista, imprenditore, PA, collezionista)
+ * @package EGI-INFO — LandingLayout
+ * @author Padmin D. Curtis (AI Partner OS3.0) for Fabio Cherici
+ * @version 1.1.0 (FlorenceEGI — EGI-INFO)
+ * @date 2026-03-31
+ * @purpose Layout principale per Home e pagine audience — v1.1.0: LsoEcosystem sub-footer.
  */
 
 interface LandingLayoutProps {
@@ -53,6 +54,9 @@ const LandingLayout: React.FC<LandingLayoutProps> = ({ variant = 'default' }) =>
         <main className="relative">
           <Outlet />
         </main>
+
+        {/* LSO Ecosystem sub-footer */}
+        <LsoEcosystem />
 
         {/* Footer */}
         <footer className="bg-dark-lighter border-t border-white/5">
