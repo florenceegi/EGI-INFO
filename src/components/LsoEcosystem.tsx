@@ -4,7 +4,7 @@
  * @version 1.0.0 (FlorenceEGI — EGI-INFO)
  * @date 2026-03-31
  * @purpose Sub-footer LSO — presenta l'ecosistema FlorenceEGI e invita
- *          a esplorare gli altri organi del Living System Oracode.
+ *          a esplorare gli altri organi del Living Software Organism.
  *          Testo solo italiano (EGI-INFO non ha i18n completo).
  */
 
@@ -23,11 +23,11 @@ const LsoEcosystem: React.FC = () => {
   return (
     <section
       className="bg-dark-lighter border-t border-white/5 py-10 px-6"
-      aria-label="Living System Oracode — ecosistema FlorenceEGI"
+      aria-label="Living Software Organism — ecosistema FlorenceEGI"
     >
       <div className="container mx-auto">
         <p className="text-xs uppercase tracking-widest text-purple-400 font-semibold mb-2">
-          Living System Oracode
+          Living Software Organism
         </p>
         <p className="text-white/50 text-sm mb-6">
           FlorenceEGI è un organismo software vivente. Ogni organo lavora in sinergia con gli altri.
