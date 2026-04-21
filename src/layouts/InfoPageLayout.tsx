@@ -3,6 +3,7 @@ import { Outlet, NavLink, Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { GlossaryProvider } from '../context/GlossaryContext';
 import { BackToTextButton } from '../components/common';
+import { SkipToMain } from '../utils/seo/Aria';
 
 /**
  * InfoPageLayout - Layout per sezione Approfondimenti
@@ -21,6 +22,7 @@ import { BackToTextButton } from '../components/common';
 
 const InfoPageLayout: React.FC = () => {
   const { t } = useTranslation('info');
+  const { t: tA11y } = useTranslation('a11y');
   const [sidebarOpen, setSidebarOpen] = React.useState(false);
 
   const menuItems = [
@@ -43,6 +45,7 @@ const InfoPageLayout: React.FC = () => {
 
   return (
     <GlossaryProvider>
+      <SkipToMain targetId="main-content" label={tA11y('skip_to_content')} />
       <div className="info-layout">
         {/* Header - minimal, sempre visibile */}
         <header className="info-header">
@@ -131,7 +134,7 @@ const InfoPageLayout: React.FC = () => {
           )}
 
           {/* Content */}
-          <main className="info-content">
+          <main id="main-content" role="main" tabIndex={-1} className="info-content">
             <Outlet />
           </main>
         </div>

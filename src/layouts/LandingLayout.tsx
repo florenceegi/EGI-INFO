@@ -8,8 +8,10 @@
 
 import React from 'react';
 import { Outlet } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { GlossaryProvider } from '../context/GlossaryContext';
 import { BackToTextButton } from '../components/common';
+import { SkipToMain } from '../utils/seo/Aria';
 
 // TypeScript declaration per Web Component LSO
 declare global {
@@ -25,8 +27,10 @@ interface LandingLayoutProps {
 }
 
 const LandingLayout: React.FC<LandingLayoutProps> = ({ variant = 'default' }) => {
+  const { t } = useTranslation('a11y');
   return (
     <GlossaryProvider>
+      <SkipToMain targetId="main-content" label={t('skip_to_content')} />
       <div
         className={`
           min-h-screen
@@ -59,7 +63,7 @@ const LandingLayout: React.FC<LandingLayoutProps> = ({ variant = 'default' }) =>
         </header>
 
         {/* Main Content */}
-        <main className="relative">
+        <main id="main-content" role="main" tabIndex={-1} className="relative">
           <Outlet />
         </main>
 
