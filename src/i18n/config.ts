@@ -35,6 +35,10 @@ import florenceEN from './locales/en/florence.json';
 import cocreateIT from './locales/it/cocreate.json';
 import cocreateEN from './locales/en/cocreate.json';
 
+// Import translations - A11y (M-101)
+import a11yIT from './locales/it/a11y.json';
+import a11yEN from './locales/en/a11y.json';
+
 const resources = {
   it: {
     common: commonIT,
@@ -47,6 +51,7 @@ const resources = {
     epp: eppIT,
     florence: florenceIT,
     cocreate: cocreateIT,
+    a11y: a11yIT,
   },
   en: {
     common: commonEN,
@@ -59,6 +64,7 @@ const resources = {
     epp: eppEN,
     florence: florenceEN,
     cocreate: cocreateEN,
+    a11y: a11yEN,
   },
 };
 
@@ -69,7 +75,7 @@ i18n
     lng: 'it', // Default language
     fallbackLng: 'it',
     
-    ns: ['common', 'glossary', 'glossary-art', 'landing', 'audiences', 'info', 'egi', 'epp', 'florence', 'cocreate'],
+    ns: ['common', 'glossary', 'glossary-art', 'landing', 'audiences', 'info', 'egi', 'epp', 'florence', 'cocreate', 'a11y'],
     defaultNS: 'common',
     
     interpolation: {

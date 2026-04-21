@@ -1,0 +1,17 @@
+{
+    "skip_to_content": "Skip to main content",
+    "panel_open": "Open accessibility preferences",
+    "panel_close": "Close",
+    "panel_title": "Accessibility preferences",
+    "panel_reset": "Reset to defaults",
+    "contrast_label": "Contrast",
+    "contrast_default": "Default",
+    "contrast_high": "High contrast",
+    "reduced_motion_label": "Animations",
+    "reduced_motion_system": "Follow system preference",
+    "reduced_motion_on": "Reduce animations",
+    "font_scale_label": "Text size",
+    "font_scale_default": "Default",
+    "font_scale_large": "Large",
+    "font_scale_xlarge": "Extra large"
+}

@@ -1,0 +1,17 @@
+{
+    "skip_to_content": "Salta al contenuto principale",
+    "panel_open": "Apri preferenze accessibilità",
+    "panel_close": "Chiudi",
+    "panel_title": "Preferenze accessibilità",
+    "panel_reset": "Ripristina predefinite",
+    "contrast_label": "Contrasto",
+    "contrast_default": "Predefinito",
+    "contrast_high": "Alto contrasto",
+    "reduced_motion_label": "Animazioni",
+    "reduced_motion_system": "Segui preferenze sistema",
+    "reduced_motion_on": "Riduci animazioni",
+    "font_scale_label": "Dimensione testo",
+    "font_scale_default": "Predefinita",
+    "font_scale_large": "Grande",
+    "font_scale_xlarge": "Molto grande"
+}
