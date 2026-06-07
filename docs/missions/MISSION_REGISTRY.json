@@ -1,0 +1,11 @@
+{
+  "_meta": {
+    "description": "Mission Registry per-organo — EGI-INFO (M-OS3-096)",
+    "organ": "EGI-INFO",
+    "id_prefix": "M-INFO",
+    "version": "1.0.0",
+    "created": "2026-06-07",
+    "note": "Mission mono-organo migrate dal centrale EGI-DOC. ID storici preservati; nuove mission usano id_prefix."
+  },
+  "missions": []
+}
