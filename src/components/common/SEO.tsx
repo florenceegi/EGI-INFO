@@ -7,6 +7,7 @@
 
 import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
+import { SITE_BASE_URL, BRAND_BASE_URL } from '../../config/site';
 
 export interface SEOProps {
   // Basic Meta
@@ -50,8 +51,6 @@ const DEFAULT_SEO: SEOProps = {
   lang: 'it'
 };
 
-const BASE_URL = 'https://florenceegi.com';
-
 /**
  * Genera il JSON-LD Schema.org
  */
@@ -66,8 +65,8 @@ function generateSchema(type: string, props: SEOProps): object {
       return {
         ...baseSchema,
         name: 'FlorenceEGI',
-        url: BASE_URL,
-        logo: `${BASE_URL}/logo.png`,
+        url: BRAND_BASE_URL,
+        logo: `${BRAND_BASE_URL}/logo.png`,
         description: props.description || DEFAULT_SEO.description,
         foundingDate: '2024',
         founders: [{ '@type': 'Person', name: 'Fabio Mele' }],
@@ -91,17 +90,17 @@ function generateSchema(type: string, props: SEOProps): object {
         ...baseSchema,
         name: props.title || DEFAULT_SEO.title,
         description: props.description || DEFAULT_SEO.description,
-        url: props.canonical || BASE_URL,
+        url: props.canonical || SITE_BASE_URL,
         inLanguage: props.lang || 'it',
         isPartOf: {
           '@type': 'WebSite',
           name: 'FlorenceEGI',
-          url: BASE_URL
+          url: SITE_BASE_URL
         },
         publisher: {
           '@type': 'Organization',
           name: 'FlorenceEGI',
-          url: BASE_URL
+          url: BRAND_BASE_URL
         }
       };
 
@@ -137,7 +136,7 @@ function generateSchema(type: string, props: SEOProps): object {
         ...baseSchema,
         headline: props.title,
         description: props.description,
-        image: props.ogImage ? `${BASE_URL}${props.ogImage}` : undefined,
+        image: props.ogImage ? `${SITE_BASE_URL}${props.ogImage}` : undefined,
         author: {
           '@type': 'Organization',
           name: 'FlorenceEGI'
@@ -147,7 +146,7 @@ function generateSchema(type: string, props: SEOProps): object {
           name: 'FlorenceEGI',
           logo: {
             '@type': 'ImageObject',
-            url: `${BASE_URL}/logo.png`
+            url: `${BRAND_BASE_URL}/logo.png`
           }
         },
         ...(props.schemaData || {})
@@ -218,8 +217,8 @@ export const SEO: React.FC<SEOProps> = (props) => {
   } = mergedProps;
 
   const lang = mergedProps.lang || i18n.language || 'it';
-  const fullCanonical = canonical?.startsWith('http') ? canonical : `${BASE_URL}${canonical || ''}`;
-  const fullImage = ogImage?.startsWith('http') ? ogImage : `${BASE_URL}${ogImage}`;
+  const fullCanonical = canonical?.startsWith('http') ? canonical : `${SITE_BASE_URL}${canonical || ''}`;
+  const fullImage = ogImage?.startsWith('http') ? ogImage : `${SITE_BASE_URL}${ogImage}`;
 
   useEffect(() => {
     // Title
@@ -265,8 +264,8 @@ export const SEO: React.FC<SEOProps> = (props) => {
 
     // Canonical & Alternate Languages
     setLink('canonical', fullCanonical);
-    setLink('alternate', `${BASE_URL}/it${canonical || ''}`, 'it');
-    setLink('alternate', `${BASE_URL}/en${canonical || ''}`, 'en');
+    setLink('alternate', `${SITE_BASE_URL}/it${canonical || ''}`, 'it');
+    setLink('alternate', `${SITE_BASE_URL}/en${canonical || ''}`, 'en');
     setLink('alternate', fullCanonical, 'x-default');
 
     // Schema.org JSON-LD

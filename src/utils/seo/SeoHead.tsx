@@ -11,6 +11,7 @@
  */
 
 import { useEffect } from 'react';
+import { SITE_BASE_URL } from '../../config/site';
 
 // ============================================
 // TYPES
@@ -69,7 +70,7 @@ export interface SeoMeta extends OpenGraphMeta {
 // CONSTANTS
 // ============================================
 
-const BASE_URL = 'https://florenceegi.com';
+const BASE_URL = SITE_BASE_URL;
 const SITE_NAME = 'FlorenceEGI';
 const DEFAULT_IMAGE = `${BASE_URL}/images/og-default.jpg`;
 const DEFAULT_LOCALE = 'it_IT';

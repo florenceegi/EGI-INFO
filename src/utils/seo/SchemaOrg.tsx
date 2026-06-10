@@ -9,6 +9,7 @@
  */
 
 import { useEffect } from 'react';
+import { SITE_BASE_URL, BRAND_BASE_URL } from '../../config/site';
 
 // ============================================
 // TYPES
@@ -194,9 +195,8 @@ export function JsonLd({ schema }: JsonLdProps) {
 // BUILDER FUNCTIONS
 // ============================================
 
-const BASE_URL = 'https://florenceegi.com';
 const ORG_NAME = 'FlorenceEGI';
-const ORG_LOGO = `${BASE_URL}/images/logo.png`;
+const ORG_LOGO = `${BRAND_BASE_URL}/images/logo.png`;
 
 /**
  * Creates FlorenceEGI organization schema (reusable)
@@ -205,7 +205,7 @@ export function createOrganizationSchema(): OrganizationSchema {
   return {
     '@type': 'Organization',
     name: ORG_NAME,
-    url: BASE_URL,
+    url: BRAND_BASE_URL,
     logo: ORG_LOGO,
     description: 'Piattaforma per la certificazione digitale di opere d\'arte con blockchain e impatto ambientale positivo',
     sameAs: [
@@ -217,7 +217,7 @@ export function createOrganizationSchema(): OrganizationSchema {
       '@type': 'ContactPoint',
       contactType: 'customer support',
       email: 'support@florenceegi.com',
-      url: `${BASE_URL}/contact`,
+      url: `${BRAND_BASE_URL}/contact`,
     },
   };
 }
@@ -243,7 +243,7 @@ export function createArticleSchema(params: {
     publisher: createOrganizationSchema(),
     datePublished: params.datePublished || new Date().toISOString(),
     dateModified: params.dateModified || new Date().toISOString(),
-    mainEntityOfPage: `${BASE_URL}${params.slug}`,
+    mainEntityOfPage: `${SITE_BASE_URL}${params.slug}`,
   };
 }
 
@@ -282,7 +282,7 @@ export function createHowToSchema(params: {
       '@type': 'HowToStep',
       name: step.name,
       text: step.text,
-      url: `${BASE_URL}#step-${index + 1}`,
+      url: `${SITE_BASE_URL}#step-${index + 1}`,
       image: step.image,
     })),
   };
@@ -300,7 +300,7 @@ export function createBreadcrumbSchema(
       '@type': 'ListItem',
       position: index + 1,
       name: item.name,
-      item: item.url ? `${BASE_URL}${item.url}` : undefined,
+      item: item.url ? `${SITE_BASE_URL}${item.url}` : undefined,
     })),
   };
 }
@@ -337,11 +337,11 @@ export function createWebPageSchema(params: {
     '@type': 'WebPage',
     name: params.name,
     description: params.description,
-    url: `${BASE_URL}${params.slug}`,
+    url: `${SITE_BASE_URL}${params.slug}`,
     isPartOf: {
       '@type': 'WebSite',
       name: ORG_NAME,
-      url: BASE_URL,
+      url: SITE_BASE_URL,
     },
     breadcrumb: params.breadcrumbs
       ? createBreadcrumbSchema(params.breadcrumbs)
