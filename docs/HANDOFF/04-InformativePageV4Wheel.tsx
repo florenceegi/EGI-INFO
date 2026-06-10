@@ -26,7 +26,7 @@ const MENU_ITEMS: WheelMenuItem[] = [
     { id: 'hero', label: 'Home', icon: '🏠', description: 'Introduzione a FlorenceEGI' },
     { id: 'originstory', label: 'La Storia', icon: '📖', description: 'Come nasce FlorenceEGI', emphasized: true },
     { id: 'egizzare', label: 'Egizzare', icon: '✨', description: 'Cosa significa egizzare' },
-    { id: 'whatisegi', label: 'Cos\'è un EGI', icon: '💎', description: 'Ecological Goods Invent' },
+    { id: 'whatisegi', label: 'Cos\'è un EGI', icon: '💎', description: 'Environment Goods Invent' },
     { id: 'transparency', label: 'Trasparenza', icon: '📊', description: 'Come si dividono i guadagni' },
     { id: 'blockchain', label: 'Blockchain', icon: '🔗', description: 'Semplice come Amazon' },
     { id: 'problems', label: 'Problemi', icon: '🛡️', description: '8 problemi risolti' },

@@ -60,7 +60,7 @@ export function EgiDefinition({
         {/* EGI acronym breakdown */}
         <div className="egi-definition__term-group">
           <dt className="egi-definition__term">
-            <abbr title="Eco Goods Invent">
+            <abbr title="Environment Goods Invent">
               <GlossaryTerm termKey="egi">EGI</GlossaryTerm>
             </abbr>
           </dt>
@@ -147,7 +147,7 @@ export function EgiDefinition({
             '@context': 'https://schema.org',
             '@type': 'DefinedTerm',
             name: 'EGI',
-            alternateName: 'Eco Goods Invent',
+            alternateName: 'Environment Goods Invent',
             description: t('meta.description'),
             inDefinedTermSet: {
               '@type': 'DefinedTermSet',

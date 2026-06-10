@@ -558,7 +558,7 @@ Riferimento a `/src/i18n/locales/it/glossary.json`:
   },
   "terms": {
     "egi": {
-      "term": "EGI (Eco Goods Invent)",
+      "term": "EGI (Environment Goods Invent)",
       "definition": "Il certificato digitale che...",
       "category": "core"
     },

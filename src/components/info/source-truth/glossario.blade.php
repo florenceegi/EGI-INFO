@@ -122,7 +122,7 @@
 
         {{-- E --}}
         <div class="p-4 rounded-lg bg-emerald-50 border-l-4 border-emerald-300">
-            <h4 class="font-bold text-gray-800 mb-2">EGI (Embodied Generative Intelligence)</h4>
+            <h4 class="font-bold text-gray-800 mb-2">EGI (Environment Goods Invent)</h4>
             <p class="text-sm text-gray-700">
                 L'unità fondamentale di FlorenceEGI: un'opera d'arte digitale certificata su blockchain, 
                 con CoA immutabile, royalty automatiche e quota EPP integrata. Non è un semplice NFT: 

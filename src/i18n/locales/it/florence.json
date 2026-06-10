@@ -1507,7 +1507,7 @@
     "quote": "Non basta creare. Occorre che qualcuno accolga.",
     "intro": "L'artista genera la forma, ma è l'incontro con il mecenate che attiva la sua piena esistenza.",
     "transformTitle": "La Trasformazione in EGI",
-    "transformDesc": "L'opera diventa EGI – Eco Goods Invent, unendo:",
+    "transformDesc": "L'opera diventa EGI – Environment Goods Invent, unendo:",
     "pillars": [
       {
         "icon": "🎨",
@@ -1549,7 +1549,7 @@
       ]
     },
     "insight": "L'opera non è mai 'finita' nell'isolamento del creatore.",
-    "body": "L'opera diventa EGI — Eco Goods Invent — unendo valore estetico, traccia digitale immutabile su Algorand, e contributo ambientale tramite EPP (Environmental Protection Projects) verificati.",
+    "body": "L'opera diventa EGI — Environment Goods Invent — unendo valore estetico, traccia digitale immutabile su Algorand, e contributo ambientale tramite EPP (Environmental Protection Projects) verificati.",
     "acronymFull": "EGI – Environment Goods Invent",
     "algorandLabel": "Algorand"
   },

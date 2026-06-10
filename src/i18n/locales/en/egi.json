@@ -1,14 +1,14 @@
 {
   "meta": {
     "title": "What are EGI - FlorenceEGI",
-    "description": "EGI (Eco Goods Invent) are digital certificates that combine art, blockchain and environmental impact in a single innovative solution.",
-    "keywords": "EGI, Eco Goods Invent, sustainable NFT, blockchain art, digital art, authenticity certificate, FlorenceEGI"
+    "description": "EGI (Environment Goods Invent) are digital certificates that combine art, blockchain and environmental impact in a single innovative solution.",
+    "keywords": "EGI, Environment Goods Invent, sustainable NFT, blockchain art, digital art, authenticity certificate, FlorenceEGI"
   },
   "hero": {
-    "badge": "Eco Goods Invent",
+    "badge": "Environment Goods Invent",
     "title": "What are EGI?",
     "subtitle": "Digital Certificates of the Ecological Renaissance",
-    "description": "EGI stands for Eco Goods Invent: digital certificates that combine aesthetic value, immutable blockchain record, and verifiable environmental contribution.",
+    "description": "EGI stands for Environment Goods Invent: digital certificates that combine aesthetic value, immutable blockchain record, and verifiable environmental contribution.",
     "cta": {
       "primary": "Explore EGI",
       "secondary": "How it works"

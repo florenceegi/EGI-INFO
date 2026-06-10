@@ -228,7 +228,7 @@ export function createEgiSeoMeta(params: {
     articleSection: 'EGI Documentation',
     articleTags: ['EGI', 'NFT', 'Blockchain', 'Arte Digitale', 'Certificato Autenticità'],
     keywords: [
-      'EGI', 'Eco Goods Invent', 'certificato digitale', 'NFT arte',
+      'EGI', 'Environment Goods Invent', 'certificato digitale', 'NFT arte',
       'blockchain Algorand', 'arte sostenibile', 'FlorenceEGI',
     ],
   };

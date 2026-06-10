@@ -15,7 +15,7 @@
     "sections": {
       "egi": {
         "title": "What are EGIs",
-        "description": "Eco Goods Invent: digital certificates that combine art, blockchain and environmental impact."
+        "description": "Environment Goods Invent: digital certificates that combine art, blockchain and environmental impact."
       },
       "epp": {
         "title": "Environmental Projects (EPP)",
@@ -51,7 +51,7 @@
     }
   },
   "egi": {
-    "badge": "Eco Goods Invent",
+    "badge": "Environment Goods Invent",
     "title": "What are EGIs?",
     "subtitle": "Digital certificates that combine aesthetic value, immutable {{blockchain}} trace and environmental contribution through {{epp}}.",
     "beyondNft": {

@@ -108,7 +108,7 @@ function generateSchema(type: string, props: SEOProps): object {
     case 'Product':
       return {
         ...baseSchema,
-        name: props.title || 'EGI - Eco Goods Invent',
+        name: props.title || 'EGI - Environment Goods Invent',
         description: props.description || DEFAULT_SEO.description,
         brand: {
           '@type': 'Brand',

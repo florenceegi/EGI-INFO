@@ -326,8 +326,8 @@ export const glossaryTerms: GlossaryTerm[] = [
     id: 'egi',
     term: { it: 'EGI', en: 'EGI' },
     definition: {
-      it: 'Acronimo di Entità Garante Immutabile. Token unico sulla blockchain Algorand che certifica la proprietà di un bene digitale o fisico.',
-      en: 'Acronym for Immutable Guaranteeing Entity. Unique token on Algorand blockchain certifying ownership of a digital or physical asset.'
+      it: 'Acronimo di Environment Goods Invent. Token unico sulla blockchain Algorand che certifica la proprietà di un bene digitale o fisico.',
+      en: 'Acronym for Environment Goods Invent. Unique token on Algorand blockchain certifying ownership of a digital or physical asset.'
     },
     category: 'florenceegi',
     relatedTerms: ['asa', 'blockchain', 'minting', 'algorand']

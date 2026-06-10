@@ -215,7 +215,7 @@ Utente chiude → torna esattamente dove era
     },
     "egi": {
       "term": "EGI",
-      "definition": "Ecological Goods Invent...",
+      "definition": "Environment Goods Invent...",
       "category": "core",
       "related": ["epp", "goods", "invent"]
     }

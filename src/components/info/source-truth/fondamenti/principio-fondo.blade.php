@@ -38,7 +38,7 @@
             <a href="#glossario" class="hover:underline">EGI</a>
         </h4>
         <p class="mb-6 text-gray-700 text-center">
-            L'opera diventa <strong>EGI – Eco Goods Invent</strong>, unendo:
+            L'opera diventa <strong>EGI – Environment Goods Invent</strong>, unendo:
         </p>
         <div class="grid gap-4 md:grid-cols-3">
             <div class="p-4 text-center rounded-lg bg-white shadow-sm">

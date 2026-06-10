@@ -17,7 +17,7 @@
   },
   "terms": {
     "egi": {
-      "term": "EGI (Eco Goods Invent)",
+      "term": "EGI (Environment Goods Invent)",
       "definition": "Il certificato digitale che unisce valore estetico, tracciatura blockchain immutabile e contributo ambientale tramite EPP. Ogni EGI è unico, verificabile on-chain e legato a un asset fisico o digitale.",
       "category": "core"
     },
